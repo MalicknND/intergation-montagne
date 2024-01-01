@@ -73,6 +73,11 @@ footer {
   display: grid;
   grid-template-columns: 50% 50%;
 }
+@media screen and (max-width: 700px) {
+  footer {
+    grid-template-columns: 1fr;
+  }
+}
 footer form {
   display: grid;
   gap: 18px;
@@ -108,11 +113,22 @@ footer .infos-contact {
   display: grid;
   grid-template-rows: repeat(4, 1fr);
 }
+@media screen and (max-width: 700px) {
+  footer .infos-contact div:nth-clild(1) {
+    border-top: 1px solid rgb(209, 209, 209);
+    padding-bottom: 20px;
+  }
+}
 footer .infos-contact div {
   border-bottom: 1px solid rgb(209, 209, 209);
   display: grid;
   grid-template-columns: 30% 70%;
   align-items: center;
+}
+@media screen and (max-width: 700px) {
+  footer .infos-contact div {
+    grid-template-columns: 45% 55%;
+  }
 }
 footer .infos-contact div h3 {
   font-family: inter-bold, sans-serif;
@@ -171,6 +187,11 @@ header h1 {
   letter-spacing: 6px;
   font-size: 4rem;
 }
+@media screen and (max-width: 700px) {
+  header h1 {
+    font-size: 2rem;
+  }
+}
 header p {
   margin: 40px auto 60px;
   font-style: italic;
@@ -217,6 +238,11 @@ header nav .nav-left li {
   align-items: center;
   cursor: pointer;
 }
+@media screen and (max-width: 700px) {
+  header nav .nav-left li {
+    font-size: 0.5rem;
+  }
+}
 header nav .nav-left li:first-child {
   background: rgb(243, 243, 243);
   color: rgb(17, 17, 17);
@@ -231,12 +257,18 @@ header nav .nav-right {
   width: 25%;
   max-width: 300px;
   justify-content: space-around;
+  margin-right: 10px;
 }
-header nav li {
+@media screen and (max-width: 700px) {
+  header nav .nav-right {
+    display: none;
+  }
+}
+header nav .nav-right li {
   transition: 0.15s;
   cursor: pointer;
 }
-header nav li:hover {
+header nav .nav-right li:hover {
   transform: scale(1.3);
 }
 
@@ -288,6 +320,11 @@ main .section1 h2 {
   text-transform: uppercase;
   font-size: 3rem;
 }
+@media screen and (max-width: 700px) {
+  main .section1 h2 {
+    font-size: 1.5rem;
+  }
+}
 main .section1 p {
   width: 60%;
   margin: 30px auto;
@@ -301,6 +338,11 @@ main .section2 {
   display: grid;
   grid-template-columns: 50% 50%;
   border-top: 1px solid rgb(209, 209, 209);
+}
+@media screen and (max-width: 700px) {
+  main .section2 {
+    grid-template-columns: 1fr;
+  }
 }
 main .section2 .left-part,
 main .section2 .right-part {
